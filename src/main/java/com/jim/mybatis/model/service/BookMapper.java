@@ -1,8 +1,7 @@
 package com.jim.mybatis.model.service;
 
-import com.jim.mybatis.model.entity.User;
+import com.jim.mybatis.model.entity.Book;
 import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
 
@@ -11,7 +10,9 @@ import java.util.List;
  * This class is ...
  */
 @Mapper
-public interface UserMapper {
-	@Select(value = "SELECT * FROM user")
-	List<User> getUsers();
+public interface BookMapper {
+
+	List<Book> find();
+
+	Book findBookById(String id);
 }
