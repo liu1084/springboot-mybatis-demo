@@ -16,7 +16,6 @@ import java.util.List;
  * This class is ...
  */
 @RestController
-@EnableAutoConfiguration
 public class BookController {
 
 	@Autowired
@@ -24,7 +23,7 @@ public class BookController {
 
 	@RequestMapping(value = {"/book"}, method = RequestMethod.GET)
 	public List<Book> find() {
-		return this.bookMapper.find();
+		return this.bookMapper.books();
 	}
 
 	@RequestMapping(value = "/book/{id}", method = RequestMethod.GET)

@@ -12,7 +12,7 @@ import java.util.List;
 @Mapper
 public interface BookMapper {
 
-	List<Book> find();
+	List<Book> books();
 
 	Book findBookById(String id);
 }

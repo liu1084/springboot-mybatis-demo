@@ -3,7 +3,7 @@
 <mapper namespace="com.jim.mybatis.model.service.BookMapper">
 
     <!--查询Sql-->
-    <select id="find" resultType="Book">
+    <select id="books" resultType="Book">
         SELECT * FROM books LIMIT 1, 10
     </select>
 

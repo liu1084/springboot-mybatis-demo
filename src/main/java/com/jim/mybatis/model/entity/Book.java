@@ -1,40 +1,138 @@
 package com.jim.mybatis.model.entity;
 
-import java.io.Serializable;
-
 /**
  * Created by jim on 2017/8/5.
  * This class is ...
  */
-public class Book implements Serializable {
-	private static final long serialVersionUID = 1L;
-
+public class Book {
 	private long id;
 
-	private String name = "";
+	private String name;
 
 	private String description;
 
-	private String cover = "";
+	private String cover;
 
-	private String author = "";
+	private String author;
 
-	private String isbn = "";
+	private String isbn;
 
-	private String year = "";
+	private String year;
 
-	private int pages = 0;
+	private int pages;
 
-	private String language = "english";
+	public long getId() {
+		return id;
+	}
 
-	private float size = 0f;
+	public void setId(long id) {
+		this.id = id;
+	}
 
-	private String format = "pdf";
+	public String getName() {
+		return name;
+	}
 
-	private long category = 0;
+	public void setName(String name) {
+		this.name = name;
+	}
 
-	private byte rating = 0;
+	public String getDescription() {
+		return description;
+	}
 
-	private Integer column;
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public String getCover() {
+		return cover;
+	}
+
+	public void setCover(String cover) {
+		this.cover = cover;
+	}
+
+	public String getAuthor() {
+		return author;
+	}
+
+	public void setAuthor(String author) {
+		this.author = author;
+	}
+
+	public String getIsbn() {
+		return isbn;
+	}
+
+	public void setIsbn(String isbn) {
+		this.isbn = isbn;
+	}
+
+	public String getYear() {
+		return year;
+	}
+
+	public void setYear(String year) {
+		this.year = year;
+	}
+
+	public int getPages() {
+		return pages;
+	}
+
+	public void setPages(int pages) {
+		this.pages = pages;
+	}
+
+	public String getLanguage() {
+		return language;
+	}
+
+	public void setLanguage(String language) {
+		this.language = language;
+	}
+
+	public float getSize() {
+		return size;
+	}
+
+	public void setSize(float size) {
+		this.size = size;
+	}
+
+	public String getFormat() {
+		return format;
+	}
+
+	public void setFormat(String format) {
+		this.format = format;
+	}
+
+	public long getCategory() {
+		return category;
+	}
+
+	public void setCategory(long category) {
+		this.category = category;
+	}
+
+	public byte getRating() {
+		return rating;
+	}
+
+	public void setRating(byte rating) {
+		this.rating = rating;
+	}
+
+	private String language;
+
+	private float size;
+
+	private String format;
+
+	private long category;
+
+	private byte rating;
 
 }
