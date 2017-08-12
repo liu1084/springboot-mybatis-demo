@@ -28,7 +28,6 @@
         <package name="com.jim.mybatis.model.entity"/>
     </typeAliases>
 
-
     <environments default="dev">
         <environment id="dev">
             <transactionManager type="JDBC"/>
@@ -40,7 +39,6 @@
             </dataSource>
         </environment>
     </environments>
-
 
     <mappers>
         <mapper resource="mapper/BookMapper.xml"/>

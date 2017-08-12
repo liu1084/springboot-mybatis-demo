@@ -4,30 +4,19 @@ package com.jim.mybatis.model.entity;
  * Created by jim on 2017/8/5.
  * This class is ...
  */
-public class Book {
-	private long id;
-
+public class Book extends Base {
 	private String name;
-
 	private String description;
-
 	private String cover;
-
 	private String author;
-
 	private String isbn;
-
 	private String year;
-
 	private int pages;
-
-	public long getId() {
-		return id;
-	}
-
-	public void setId(long id) {
-		this.id = id;
-	}
+	private String language;
+	private float size;
+	private String format;
+	private long category;
+	private byte rating;
 
 	public String getName() {
 		return name;
@@ -124,15 +113,5 @@ public class Book {
 	public void setRating(byte rating) {
 		this.rating = rating;
 	}
-
-	private String language;
-
-	private float size;
-
-	private String format;
-
-	private long category;
-
-	private byte rating;
 
 }

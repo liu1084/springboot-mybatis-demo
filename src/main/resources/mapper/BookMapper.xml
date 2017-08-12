@@ -1,14 +1,33 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "mybatis-3-mapper.dtd">
 <mapper namespace="com.jim.mybatis.model.service.BookMapper">
+    <resultMap id="base" type="Base">
+        <result property="createAt" column="create_at"/>
+        <result property="updateAt" column="update_at"/>
+    </resultMap>
+
+    <resultMap id="bookResultMap" type="Book" extends="base">
+
+    </resultMap>
+
+    <resultMap id="top10" type="Book" extends="base">
+        <association property="id" column="book_id" javaType="Link"/>
+    </resultMap>
 
     <!--查询Sql-->
-    <select id="books" resultType="Book">
+    <select id="books" resultMap="bookResultMap">
         SELECT * FROM books LIMIT 1, 10
     </select>
 
-    <select id="findBookById" resultType="Book">
+    <select id="findBookById" resultMap="bookResultMap">
         SELECT * FROM books WHERE id = #{id}
+    </select>
+
+    <select id="getDownloadTop10" resultMap="top10">
+        SELECT t1.*, t2.*, SUM(t2.times) AS top10 FROM books AS t1
+        LEFT JOIN book_links AS t2 ON t1.id = t2.book_id
+        ORDER BY top10 DESC
+
     </select>
 
 </mapper>
